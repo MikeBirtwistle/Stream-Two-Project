@@ -12,22 +12,24 @@ COLLECTION_NAME = 'stats'
 
 
 @app.route("/")
-def index():
+def home():
 
-   """
-   A Flask view to serve the main dashboard page.
-   """
+    # A Flask view to serve the home page.
 
-   return render_template("index.html")
+    return render_template("home.html")
+
+@app.route("/dashboard")
+def dashboard():
+
+   # A Flask view to serve the main dashboard page.
+
+   return render_template("dashboard.html")
 
 
 @app.route("/footballStats/stats")
-def donor_projects():
+def footballStats():
 
-   """
-   A Flask view to serve the project data from
-   MongoDB in JSON format.
-   """
+   # A Flask view to serve the project data from MongoDB in JSON format.
 
    # A constant that defines the record fields that we wish to retrieve.
 
@@ -39,8 +41,7 @@ def donor_projects():
       'Home Red Cards': True, 'Away Red Cards': True,
    }
 
-   # Open a connection to MongoDB using a with statement such that the
-   # connection will be closed as soon as we exit the with statement
+   # Open a connection to MongoDB using a with statement such that the connection will be closed as soon as we exit the with statement
 
    with MongoClient(MONGODB_HOST, MONGODB_PORT) as conn:
 
@@ -48,8 +49,7 @@ def donor_projects():
 
       collection = conn[DBS_NAME][COLLECTION_NAME]
 
-      # Retrieve a result set only with the fields defined in FIELDS
-      # and limit the the results to 55000
+      # Retrieve a result set only with the fields defined in FIELDS and limit the the results to 10,000
 
       stats = collection.find(projection=FIELDS, limit=10000)
 

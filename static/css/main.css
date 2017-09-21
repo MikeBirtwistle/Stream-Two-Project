@@ -1,3 +1,29 @@
+/*************************** Main Styling ***************************/
+
+html {
+	width: 100%;
+}
+
 body {
     background-image: url("../images/background.jpg");
 }
+
+/**************************** Navigation ****************************/
+
+.navbar-default {
+	background-color:#ffffff
+}
+
+.navbar-default .navbar-brand > a {
+    color:#000000
+}
+.navbar-default .navbar-brand:hover {
+	color: #000000;
+}
+
+.navbar-default .navbar-brand:focus{
+	color :#000000;
+}
+
+/**************************** Footer ****************************/
+
