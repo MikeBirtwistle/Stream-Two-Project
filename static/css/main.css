@@ -1,29 +1,71 @@
 /*************************** Main Styling ***************************/
 
 html {
-	width: 100%;
+	height: 100%;
+    margin:0;
 }
 
 body {
+    height: 100%;
+    margin:0;
+}
+
+.bg {
     background-image: url("../images/background.jpg");
+    height:100%;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    z-index:-1;
 }
 
 /**************************** Navigation ****************************/
 
 .navbar-default {
-	background-color:#ffffff
+	background-color:transparent;
+    border-bottom: none;
 }
 
-.navbar-default .navbar-brand > a {
-    color:#000000
+.navbar-default .navbar-nav >li >a {
+    font-size:large;
+    color:#ffffff;
+    margin-right: -75px;
+    margin-left: 75px;
+    font-family: 'Cinzel', serif;
 }
+
 .navbar-default .navbar-brand:hover {
-	color: #000000;
+	color: #ffffff;
 }
 
 .navbar-default .navbar-brand:focus{
-	color :#000000;
+	color :#ffffff;
+}
+
+.nav.navbar-nav.navbar-right li a:hover {
+    color:#ffffff;
+}
+
+.nav.navbar-nav.navbar-right li a:focus {
+	color:#ffffff;
+}
+
+.navbar> .container .navbar-brand, .navbar> .container-fluid .navbar-brand {
+    margin-left: -100px;
+    font-family: 'Cinzel', serif;
 }
 
 /**************************** Footer ****************************/
 
+footer p {
+    color:lightgrey;
+    opacity:0.5;
+    font-size:13px;
+}
+footer p a {
+    color:lightgrey;
+}
+
+footer p a:hover {
+    color:#ffffff;
+}
