@@ -2,6 +2,15 @@
 
 {% block content %}
 
+    <p id="homePara">Welcome to the football stats data dashboard</p>
 
+    <p id="homePara2">Years 2014-2017</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#homePara").hide(0).delay(2000).fadeIn(3000)
+            $("#homePara2").hide(0).delay(4000).fadeIn(3000)
+        });
+    </script>
 
 {% endblock %}

@@ -6,17 +6,16 @@ html {
 }
 
 body {
-    height: 100%;
-    margin:0;
-}
-
-.bg {
     background-image: url("../images/background.jpg");
     height:100%;
     background-position:center;
     background-repeat:no-repeat;
     background-size:cover;
-    z-index:-1;
+}
+
+@keyframes on-off {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
 }
 
 /**************************** Navigation ****************************/
@@ -27,11 +26,10 @@ body {
 }
 
 .navbar-default .navbar-nav >li >a {
-    font-size:large;
+    font-size:x-large;
     color:#ffffff;
-    margin-right: -75px;
-    margin-left: 75px;
     font-family: 'Cinzel', serif;
+    text-align:center;
 }
 
 .navbar-default .navbar-brand:hover {
@@ -42,17 +40,20 @@ body {
 	color :#ffffff;
 }
 
+.navbar> .container .navbar-brand, .navbar> .container-fluid .navbar-brand {
+    font-family: 'Cinzel', serif;
+    font-size:x-large;
+}
+
 .nav.navbar-nav.navbar-right li a:hover {
     color:#ffffff;
+    -webkit-transform:scale(1.2);
+    -ms-transform:scale(1.2);
+    -moz-transform:scale(1.2);
 }
 
 .nav.navbar-nav.navbar-right li a:focus {
 	color:#ffffff;
-}
-
-.navbar> .container .navbar-brand, .navbar> .container-fluid .navbar-brand {
-    margin-left: -100px;
-    font-family: 'Cinzel', serif;
 }
 
 /**************************** Footer ****************************/
@@ -69,3 +70,23 @@ footer p a {
 footer p a:hover {
     color:#ffffff;
 }
+
+/***************************** Home *****************************/
+
+#homePara {
+    color:#ffffff;
+    font-size:60px;
+    margin-top:130px;
+    text-align:center;
+    font-family: 'Cinzel', serif;
+}
+
+#homePara2 {
+    color:#ffffff;
+    font-size:40px;
+    margin-top:170px;
+    text-align:center;
+    font-family: 'Cinzel', serif;
+    animation:on-off 1.5s ease-in-out 1s infinite alternate;
+}
+

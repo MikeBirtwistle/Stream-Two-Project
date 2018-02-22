@@ -36,7 +36,8 @@ def footballStats():
    FIELDS = {
       '_id': False, 'League': True, 'Date': True,
       'Home Team': True, 'Away Team': True,
-      'Full Time Home Goals': True, 'Full Time Away Goals': True,
+      'Home Goals': True, 'Away Goals': True,
+       'Home Corners': True, 'Away Corners': True,
       'Full Time Result': True, 'Home Yellow Cards': True, 'Away Yellow Cards': True,
       'Home Red Cards': True, 'Away Red Cards': True,
    }
